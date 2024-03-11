@@ -4,7 +4,28 @@
 	ViewData["Title"] = "Login Page";
 }
 
-<head>
+
+
+<body>
+	<div class="container-fluid">
+		<div class="card12 border-dark">
+			<form method="post" onsubmit="return formvalidate(this)">
+				<center>
+					<p><h1>Login</h1></p>
+				</center>
+
+				<label ><br><b>E-mail:</b><font color="#ff2600"><sup>*</sup></font> </label>
+				<input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
+
+
+				<label><br><b> Password:<font color="#ff2600"><sup>*</sup></font></b></label>
+				<input type="password" class="fcontrol" placeholder="Enter strong password" name="pass"> <br>
+
+				<br><center><input type="submit" class="button" name="submit" value="Log in"></center><br>
+				<center><p>Not a member? <a asp-page="/Register">Register</a></p></center> 
+			</form>
+		</div>
+	</div>
     <script type="text/javascript">
         function formvalidate(thisform) {
             var email = thisform.value.value;
@@ -85,8 +106,7 @@
             background-size: cover;
         }
 
-        .card {
-            height: 400px;
+        .card12 {
             width: 550px;
             border-radius: 20px;
             margin: 0%;
@@ -100,26 +120,4 @@
         }
 
     </style>
-</head>
-
-<body>
-	<div class="container-fluid">
-		<div class="card border-dark">
-			<form method="post" onsubmit="return formvalidate(this)">
-				<center>
-					<p><h1>Login</h1></p>
-				</center>
-
-				<label ><br><b>E-mail:</b><font color="#ff2600"><sup>*</sup></font> </label>
-				<input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
-
-
-				<label><br><b> Password:<font color="#ff2600"><sup>*</sup></font></b></label>
-				<input type="password" class="fcontrol" placeholder="Enter strong password" name="pass"> <br>
-
-				<br><center><input type="submit" class="button" name="submit" value="Log in"></center><br>
-				<center><p>Not a member? <a asp-page="/Register">Register</a></p></center> 
-			</form>
-		</div>
-	</div>
 </body>
